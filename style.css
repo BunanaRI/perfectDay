@@ -1,15 +1,15 @@
 body{
 font-family:'Courier New', Courier, monospace;
 }
-.navbar,
-.front,
-.main-section {
+.center{text-align:center;}
+.page-width {
     width: 90%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
 }
+
 .white{background-color:white}
 .navbar {
     display: flex;
@@ -21,21 +21,11 @@ font-family:'Courier New', Courier, monospace;
     background:white;
 }
 
-.navbar-section {
-    display: flex;
-    align-items: center;
-}
-
 .navbar-section a {
     font-size: 2.1875rem; /* 2.1875rem */
     color: black;
     padding: 0 0.625rem; /* 0.625rem */
     text-decoration: none;
-}
-
-.navbar-section.center {
-    justify-content: center;
-    flex-grow: 1;
 }
 
 .navbar-section a:hover {
@@ -116,17 +106,16 @@ font-family:'Courier New', Courier, monospace;
 .main-img {
   width: 90%;
   height: 60vh;
-  background-color: hotpink;
+  background-color: white;
   border:2px black dashed;
   margin: 0 auto;
-  box-shadow:-10px 10px ;
+  box-shadow: -10px 10px;
 
 }
 .front{
-    background:black;
+    background:white;
     border:1px black solid;
-    width: 90%;
-    max-width: 1200px;
+  box-shadow: 10px 10px;
 }
 
 a{
@@ -135,3 +124,86 @@ a{
     padding: 0 0.625rem; /* 0.625rem */
     text-decoration: none;
 }
+/* =========================
+   VINTAGE FRAME
+   ========================= */
+
+.outer-border {
+    width: 100%;
+    border: 2px solid black;
+    padding: 6px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.mid-border {
+    width: 100%;
+    border: 6px solid black;
+    padding: 6px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.inner-border {
+    position: relative;
+    width: 100%;
+    border: 2px solid black;
+
+    /* room between frame and .main-img */
+    padding: 4rem;
+
+    background: white;
+    box-sizing: border-box;
+}
+
+
+.corner-decoration {
+    position: absolute;
+    width: 5rem;
+    height: auto;
+    margin: -6px;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+.corner-left-top {
+    top: 8px;
+    left: 8px;
+}
+
+.corner-right-top {
+    top: 8px;
+    right: 8px;
+    transform: scaleX(-1);
+}
+
+.corner-right-bottom {
+    right: 8px;
+    bottom: 8px;
+    transform: scale(-1);
+}
+
+.corner-left-bottom {
+    left: 8px;
+    bottom: 8px;
+    transform: scaleY(-1);
+}
+
+@media (max-width: 768px) {
+
+    .inner-border {
+        padding: 2.5rem;
+    }
+
+    .corner-decoration {
+        width: 3.5rem;
+        margin: -4px;
+    }
+
+    .vertical-decoration {
+        width: 12rem;
+    }
+}
+
+content{width:50%!important;}
