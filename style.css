@@ -1,0 +1,129 @@
+body{
+font-family:'Courier New', Courier, monospace;
+}
+
+.white{background-color:white}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem; /* 0.625rem 1.25rem */
+    z-index: 2;
+    border:1px solid black;
+    box-shadow: 10px 10px;
+    background:white;
+}
+
+.navbar-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-section a {
+    font-size: 2.1875rem; /* 2.1875rem */
+    color: black;
+    padding: 0 0.625rem; /* 0.625rem */
+    text-decoration: none;
+}
+
+.navbar-section.center {
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-section a:hover {
+    color: rgb(40, 12, 91);
+    text-decoration: none;
+}
+
+.sidebar-btn i {
+    font-size: 2rem;
+}
+
+/* sidebar hint anchor */
+.sidebar-trigger{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* hint container */
+.sidebar-hint{
+    position: absolute;
+    top: 3.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:2rem;
+    color:#721c24;
+    pointer-events:none;
+    animation: sidebarBounce 1.4s ease-in-out infinite;
+}
+.hint-text{
+    white-space: nowrap;
+    margin-top: -0.25rem;
+}
+/* hand icon */
+.sidebar-hint i{
+    font-size: 1.2rem;
+    line-height: 1;
+    display: inline-block;
+    background:black;
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* bounce animation */
+@keyframes sidebarBounce{
+    0%,100%{
+        transform: translate(-50%,0);
+    }
+    50%{
+        transform: translate(-50%,-0.3125rem);
+    }
+}
+
+.water {
+  position: fixed;
+  inset: -5%;
+
+  background-image: url("https://i.pinimg.com/1200x/cf/0e/31/cf0e31a176da6f9331180c30df3e0a15.jpg");
+  background-size: cover;
+  background-position: center;
+
+  /* black & white */
+  filter:
+    grayscale(1)
+    contrast(1.35)
+    url("#ripple");
+
+  transform: scale(1.08);
+}
+
+.main-img {
+  width: 90%;
+  height: 60vh;
+  background-color: hotpink;
+  border:2px black dashed;
+  margin: 0 auto;
+  box-shadow:-10px 10px ;
+
+}
+.front{
+    background:black;
+    border:1px black solid;
+    width: 90%;
+    max-width: 1200px;
+}
+
+a{
+    font-size: 2.1875rem; /* 2.1875rem */
+    color: black;
+    padding: 0 0.625rem; /* 0.625rem */
+    text-decoration: none;
+}
