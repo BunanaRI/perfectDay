@@ -45,7 +45,128 @@ font-weight: bold;
     color: rgb(40, 12, 91);
     text-decoration: none;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    z-index: 2;
 
+    position: relative;
+
+    border: 1px solid black;
+    box-shadow: 10px 10px;
+    background: white;
+}
+
+
+/* =========================
+   ART DECO NAVBAR CORNERS
+   ========================= */
+
+.nav-corner {
+    position: absolute;
+
+    width: 0.5rem;
+    height: 0.5rem;
+
+    border: 1px solid black;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+/* decorative lines */
+
+.nav-corner::before,
+.nav-corner::after {
+    content: "";
+    position: absolute;
+}
+
+
+/* horizontal extension */
+
+.nav-corner::after {
+    width: 2rem;
+    height: calc(1rem - 1px);
+}
+
+
+/* vertical extension */
+
+.nav-corner::before {
+    width: calc(1rem - 1px);
+    height: 2rem;
+}
+
+
+/* LEFT */
+
+.nav-corner.left {
+    left: -0.5rem;
+}
+
+.nav-corner.left::after {
+    left: calc(-2px + 1rem);
+    border-left: 1px solid black;
+}
+
+.nav-corner.left::before {
+    left: -1px;
+    border-left: 1px solid black;
+}
+
+
+/* RIGHT */
+
+.nav-corner.right {
+    right: -0.5rem;
+}
+
+.nav-corner.right::after {
+    right: calc(-2px + 1rem);
+    border-right: 1px solid black;
+}
+
+.nav-corner.right::before {
+    right: -1px;
+    border-right: 1px solid black;
+}
+
+
+/* TOP */
+
+.nav-corner.top {
+    top: -0.5rem;
+}
+
+.nav-corner.top::after {
+    top: -1px;
+    border-top: 1px solid black;
+}
+
+.nav-corner.top::before {
+    top: calc(-2px + 1rem);
+    border-top: 1px solid black;
+}
+
+
+/* BOTTOM */
+
+.nav-corner.bottom {
+    bottom: -0.5rem;
+}
+
+.nav-corner.bottom::after {
+    bottom: -1px;
+    border-bottom: 1px solid black;
+}
+
+.nav-corner.bottom::before {
+    bottom: calc(-2px + 1rem);
+    border-bottom: 1px solid black;
+}
 .sidebar-btn i {
     font-size: 2rem;
 }
